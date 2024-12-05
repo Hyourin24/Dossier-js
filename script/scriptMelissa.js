@@ -20,7 +20,7 @@ try {
 
 
 try {
-    fetch('https://jsonplaceholder.typicode.com/users/[userId]', {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
      title: 'foo',
@@ -34,13 +34,15 @@ try {
   }).then((response) => response.json())
   .then((json) => console.log(json));
 
+  //va chercher username
+  let userElement = document.createElement("userInfo")
+  userElement.textContent = `username: ${user.username}`
+  
 } catch(error) {
   console.log(error);
 }
-
-
 try {
-    fetch('https://jsonplaceholder.typicode.com/posts?userId=[userId]', {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
     method: 'POST',
     body: JSON.stringify({
      title: 'foo',
@@ -54,11 +56,41 @@ try {
   }).then((response) => response.json())
   .then((json) => console.log(json));
 
+  //va chercher commentaire
+  
+
+  let userElement = document.createElement("userInfo")
+  userElement.textContent = `commentaire: ${user.body}`
+  
 } catch(error) {
   console.log(error);
 }
 
-let user = userArray[1];
-        console.log(user);
+async function AfficherPost() {
+    try {
+        let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
+        let posts = await responsePosts.json();
 
+        let responseUsers = await fetch('https://jsonplaceholder.typicode.com/users');
+        let users = await responseUsers.json();
 
+        posts.forEach(post => {
+            let userSection = document.createElement("postDiv");
+            userSection.classList.add("postInfo");
+            userSection.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
+            document.body.appendChild(userSection);
+
+            let user = users.find(user => user.id === post.userId);
+            if (user) {
+                let userSection = document.createElement("div");
+                userSection.classList.add("userInfo");
+                userSection.textContent = `Nom de l'utilisateur: ${user.name}`;
+                userSection.appendChild(userInfoDiv);
+            }
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+AfficherPost();
