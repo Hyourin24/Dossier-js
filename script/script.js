@@ -50,19 +50,39 @@ async function AfficherPost() {
 
         let responseUsers = await fetch('https://jsonplaceholder.typicode.com/users');
         let users = await responseUsers.json();
+        
 
+        //--- Selection de chaque élément du fetch
         posts.forEach(post => {
+            //-----Création de div égales au nombre de profil 
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
-            postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
             userSection1.appendChild(postDiv);
+            //-----Sélection de chaque titre
+            let postTitre = document.createElement("a")
+            postTitre.classList.add("postTitre")
+            postTitre.textContent = `Titre: ${post.title}`
+            postDiv.appendChild(postTitre);
+            //------Sélection de chaque contenu
+            let postBody = document.createElement("a")
+            postBody.classList.add("postBody")
+            postBody.textContent = `Contenu: ${post.body}`
+            postDiv.appendChild(postBody);
             
-
+            //------Reprise de la balise user et userID pour que les deux soient égales avec find
             let user = users.find(user => user.id === post.userId);
-                let userInfoDiv = document.createElement("div");
-                userInfoDiv.classList.add("userInfo");
-                userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
-                postDiv.appendChild(userInfoDiv);
+            
+                let postName = document.createElement("p");
+                postName.classList.add("postName");
+                postName.textContent = `Nom de l'utilisateur: `;
+                postDiv.appendChild(postName);
+                let userLink = document.createElement("a");
+                userLink.textContent = user.name; 
+                userLink.href = `https://jsonplaceholder.typicode.com/users/${user.id}`; 
+
+                // Ajouter le lien au div utilisateur
+                postName.appendChild(userLink);
+               
         });
     } catch (error) {
         console.error(error);
