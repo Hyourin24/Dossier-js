@@ -35,14 +35,18 @@ footer {
     width: 200px;
     height: 30px;
     border-radius: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient( rgb(177, 221, 245) 0%, rgb(9, 183, 246) 90%);
+    filter: drop-shadow(rgba(101, 171, 124, 0.484) 0rem 1rem 3px);
 }
 
-.search-container input {
-    width: 100%;
-    height: 100%;
-    padding-left: 40px;
-    border: none;
+.userComments {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
     border-radius: 20px;
     font-size: 16px;
     outline: none;
