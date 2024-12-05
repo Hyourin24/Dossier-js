@@ -14,7 +14,7 @@ try {
   }).then((response) => response.json())
   .then((json) => console.log(json));
 
-fetch('https://jsonplaceholder.typicode.com/users/[userId]', {
+ fetch('https://jsonplaceholder.typicode.com/users', {
     method: 'POST',
     body: JSON.stringify({
      title: 'foo',
@@ -35,6 +35,8 @@ fetch('https://jsonplaceholder.typicode.com/users/[userId]', {
   console.log(error);
 }
 
+let main = document.querySelector(".main");
+let userSection3 = document.querySelector(".userSection3")
 async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -44,18 +46,16 @@ async function AfficherPost() {
         let users = await responseUsers.json();
 
         posts.forEach(post => {
-            let userSection = document.createElement("postDiv");
-            userSection.classList.add("postInfo");
-            userSection.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
-            document.body.appendChild(userSection);
+            let postDiv = document.createElement("div");
+            postDiv.classList.add("postInfo");
+            postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
+            userSection3.appendChild(postDiv);
 
             let user = users.find(user => user.id === post.userId);
-            if (user) {
-                let userSection = document.createElement("div");
-                userSection.classList.add("userInfo");
-                userSection.textContent = `Nom de l'utilisateur: ${user.name}`;
-                userSection.appendChild(userInfoDiv);
-            }
+                let userInfoDiv = document.createElement("div");
+                userInfoDiv.classList.add("userInfo");
+                userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
+                postDiv.appendChild(userInfoDiv);
         });
     } catch (error) {
         console.error(error);
