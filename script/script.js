@@ -56,6 +56,7 @@ async function AfficherPost() {
             postDiv.classList.add("postInfo");
             postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
             userSection1.appendChild(postDiv);
+            
 
             let user = users.find(user => user.id === post.userId);
                 let userInfoDiv = document.createElement("div");
