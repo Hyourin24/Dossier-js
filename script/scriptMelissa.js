@@ -1,17 +1,17 @@
 
-let main = document.querySelector(".main");
- export let userSection3 = document.querySelector(".userSection3")
-  async function AfficherPost() {
+//let main = document.querySelector(".main");
+export let userSection3 = document.querySelector(".userSection3")
+async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
         let posts = await responsePosts.json();
 
         let responseUsers = await fetch('https://jsonplaceholder.typicode.com/users');
         let users = await responseUsers.json();
-        
+
         let responseComments = await fetch('https://jsonplaceholder.typicode.com/comments');
-        let comments = await responseComments.json(); 
-       
+        let comments = await responseComments.json();
+
         posts.forEach(post => {
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
@@ -24,16 +24,41 @@ let main = document.querySelector(".main");
             userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
             postDiv.appendChild(userInfoDiv);
 
-            let comment = users.find( comment => comment.id === post.userId);
-            let userCommentsDiv = document.createElement("div");
-            userCommentsDiv.classList.add("userComments");
-            userCommentsDiv.textContent = `Commentaire: ${comments.body}`;
-            userSection3.appendChild(userCommentsDiv);
+            let postComments = comments.filter(comment => comment.postId === post.id);
+
+            postComments.forEach(comment => {
+                let deleteButton = document.createElement("button");
+                deleteButton.classList.add("monBouton");
+                let commentsDiv = document.createElement("div");
+                commentsDiv.classList.add("commentsDiv");
+                commentsDiv.textContent = `Commentaire: ${comment.body}`;
+                postDiv.appendChild(commentsDiv);
+                commentsDiv.appendChild(deleteButton);
+                deleteButton.textContent = "Supprimer"
+                deleteButton.addEventListener("click", () => {
+                    commentsDiv.remove()
+                })
+            });
         });
+
+
+
+
     } catch (error) {
         console.error(error);
     }
 }
 
 AfficherPost();
+
+
+
+
+
+
+
+
+
+
+
 
