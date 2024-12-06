@@ -26,8 +26,14 @@ async function AfficherPost() {
 
             let postComments = comments.filter(comment => comment.postId === post.id);
 
-
             
+            let deleteButton = document.createElement("button");
+            deleteButton.classList.add("monBouton");
+            postDiv.appendChild(deleteButton);
+            deleteButton.textContent = "Supprimer"
+                deleteButton.addEventListener("click", () => {
+                    postDiv.remove()
+                })
             postComments.forEach(comment => {
 
 
@@ -38,13 +44,7 @@ async function AfficherPost() {
 
                 
             });
-            let deleteButton = document.createElement("button");
-            deleteButton.classList.add("monBouton");
-            postDiv.appendChild(deleteButton);
-            deleteButton.textContent = "Supprimer"
-                deleteButton.addEventListener("click", () => {
-                    postDiv.remove()
-                })
+
 
         });
 
