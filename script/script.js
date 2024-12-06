@@ -42,7 +42,7 @@
 
 
 let main = document.querySelector(".main");
-let userSection = document.querySelector(".userSection")
+let userSection1 = document.querySelector(".userSection1")
 async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -55,15 +55,13 @@ async function AfficherPost() {
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
             postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
-            userSection.appendChild(postDiv);
+            userSection1.appendChild(postDiv);
 
             let user = users.find(user => user.id === post.userId);
-            if (user) {
                 let userInfoDiv = document.createElement("div");
                 userInfoDiv.classList.add("userInfo");
                 userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
                 postDiv.appendChild(userInfoDiv);
-            }
         });
     } catch (error) {
         console.error(error);
