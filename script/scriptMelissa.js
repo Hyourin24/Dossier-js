@@ -62,19 +62,26 @@ async function AfficherPost() {
 
             let postComments = comments.filter(comment => comment.postId === post.id);
 
+
+            
             postComments.forEach(comment => {
-                let deleteButton = document.createElement("button");
-                deleteButton.classList.add("monBouton");
+
+
                 let commentsDiv = document.createElement("div");
                 commentsDiv.classList.add("commentsDiv");
                 commentsDiv.textContent = `Commentaire: ${comment.body}`;
                 postDiv.appendChild(commentsDiv);
-                commentsDiv.appendChild(deleteButton);
-                deleteButton.textContent = "Supprimer"
-                deleteButton.addEventListener("click", () => {
-                    commentsDiv.remove()
-                })
+
+                
             });
+            let deleteButton = document.createElement("button");
+            deleteButton.classList.add("monBouton");
+            postDiv.appendChild(deleteButton);
+            deleteButton.textContent = "Supprimer"
+                deleteButton.addEventListener("click", () => {
+                    postDiv.remove()
+                })
+
         });
 
 
