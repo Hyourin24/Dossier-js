@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+
+header {
+    background: linear-gradient(to bottom, rgba(119, 223, 70, 0.944), rgb(7, 142, 16)100%);
+    padding: 30;
+}
+
+/* bouttons */
+#connexion, #inscription{
+    padding: 15;
+    border-radius: 50px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.5s;
+    transform: translate(-15%);
+}
+#connexion {
+    color: white;
+    background-color: rgb(29, 57, 22);
+}
+#connexion:hover {
+    background-color: white;
+    color: black;
+}
+#inscription:hover {
+    background-color: rgb(29, 57, 22);
+    color: aliceblue;
+}
