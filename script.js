@@ -17,7 +17,6 @@ function loadUserPosts(userId) {
         .then(posts => {
             // Filtrer les posts 
             const userPosts = posts.filter(post => post.userId === userId);
-
             if (userPosts.length === 0) {
                 postsList.innerHTML = "<li>Aucun post trouvé pour cet utilisateur.</li>";
                 return;
@@ -28,6 +27,7 @@ function loadUserPosts(userId) {
                 const listItem = document.createElement("li");
                 listItem.innerHTML = `<h3>${post.title}</h3><p>${post.body}</p>`;
                 postsList.appendChild(listItem);
+
             });
         })
         .catch(error => {
@@ -44,3 +44,5 @@ loadPostsButton.addEventListener("click", () => {
 
     loadUserPosts(userId);
 });
+
+console.log(userId)
