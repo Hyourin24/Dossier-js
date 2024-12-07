@@ -2,19 +2,20 @@
     margin: 0;
 }
 
-header,
-footer {
+header {
     text-align: center;
     color: white;
     padding: 40px 0;
-    background: radial-gradient(circle, rgba(177, 245, 185, 1) 0%, rgba(2, 227, 77, 1) 100%);
-
-
+    background: linear-gradient(0deg, rgba(42,120,94,1) 0%, rgba(1,54,44,1) 60%);
 }
 
-header {
-    filter: drop-shadow(rgb(1, 149, 50) 0rem 0rem 10px);
+footer {
+    background-color: #2a785e;
+    padding: 40px 0;
+    
 }
+
+
 
 .postInfo {
     margin-left: 100px;
@@ -22,25 +23,14 @@ header {
     margin-top: 50px;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left: 80px;
-    padding-right: 20px;
-    border-radius: 20px;
-    background: linear-gradient(rgb(177, 221, 245) 0%, rgb(9, 183, 246) 90%);
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid 2px rgba(42,120,94,1) ;
 
 }
 
 .commentsDiv {
-    margin-left: 100px;
-    margin-right: 100px;
-
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 20px;
-    background: linear-gradient(rgba(177, 245, 185, 1) 0%, rgb(9, 246, 88) 90%);
-    filter: drop-shadow(rgba(101, 171, 124, 0.484) 0rem 1rem 3px);
-
+    padding-top: 20px;
 }
 
 h1 {
