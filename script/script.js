@@ -43,6 +43,7 @@
 
 let main = document.querySelector(".main");
 let userSection1 = document.querySelector(".userSection1")
+
 async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -58,31 +59,13 @@ async function AfficherPost() {
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
             userSection1.appendChild(postDiv);
-            //-----Sélection de chaque titre
-            let postTitre = document.createElement("a")
-            postTitre.classList.add("postTitre")
-            postTitre.textContent = `Titre: ${post.title}`
-            postDiv.appendChild(postTitre);
-            //------Sélection de chaque contenu
-            let postBody = document.createElement("a")
-            postBody.classList.add("postBody")
-            postBody.textContent = `Contenu: ${post.body}`
-            postDiv.appendChild(postBody);
             
-            //------Reprise de la balise user et userID pour que les deux soient égales avec find
-            let user = users.find(user => user.id === post.userId);
-            
-                let postName = document.createElement("p");
-                postName.classList.add("postName");
-                postName.textContent = `Nom de l'utilisateur: `;
-                postDiv.appendChild(postName);
-                let userLink = document.createElement("a");
-                userLink.textContent = user.name; 
-                userLink.href = `https://jsonplaceholder.typicode.com/users/${user.id}`; 
 
-                // Ajouter le lien au div utilisateur
-                postName.appendChild(userLink);
-               
+            let user = users.find(user => user.id === post.userId);
+                let userInfoDiv = document.createElement("div");
+                userInfoDiv.classList.add("userInfo");
+                userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
+                postDiv.appendChild(userInfoDiv);
         });
     } catch (error) {
         console.error(error);
