@@ -1,4 +1,40 @@
 
+try {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    body: JSON.stringify({
+     title: 'foo',
+      body: 'bar',
+      userId: 1,
+  }),
+   headers: {
+  'Content-type': 'application/json; charset=UTF-8',
+   },
+         
+  }).then((response) => response.json())
+  .then((json) => console.log(json));
+
+ fetch('https://jsonplaceholder.typicode.com/users', {
+    method: 'POST',
+    body: JSON.stringify({
+     title: 'foo',
+      body: 'bar',
+      userId: 1,
+  }),
+   headers: {
+  'Content-type': 'application/json; charset=UTF-8',
+   },
+         
+  }).then((response) => response.json())
+  .then((json) => console.log(json));
+
+
+
+
+} catch(error) {
+  console.log(error);
+}
+
 //let main = document.querySelector(".main");
 export let userSection3 = document.querySelector(".userSection3")
 async function AfficherPost() {
