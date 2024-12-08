@@ -1,12 +1,7 @@
-*{
+* {
+    padding: 0;
     margin: 0;
-}
-header, footer {
-    text-align: center;
-    color: white;
-    padding: 40px 0;
-    background: radial-gradient(circle, rgba(177, 245, 185, 1) 0%, rgba(2, 227, 77, 1) 100%);
-
+    text-decoration: none;
 
 }
 
@@ -23,14 +18,14 @@ header {
     padding-left: 80px;
     padding-right: 20px;
     border-radius: 20px;
-    background: linear-gradient( rgb(177, 221, 245) 0%, rgb(9, 183, 246) 90%);
-    
+    background: linear-gradient(rgb(177, 221, 245) 0%, rgb(9, 183, 246) 90%);
+
 }
 
 .commentsDiv {
     margin-left: 100px;
     margin-right: 100px;
-    
+
     padding-top: 40px;
     padding-bottom: 40px;
     padding-left: 20px;
@@ -44,26 +39,13 @@ header {
 h1 {
     text-align: center;
     color: white;
+    background-color: rgb(29, 57, 22);
 }
-
-body {
-    background-color: (237,249,239,1);
+#connexion:hover {
+    background-color: white;
+    color: black;
 }
-
-.bouton {
-    display:flex;
-    justify-content: center;
-    margin: 50px;
+#inscription:hover {
+    background-color: rgb(29, 57, 22);
+    color: aliceblue;
 }
-
-.monBouton {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: none;
-    border-radius: 80px;
-    background: linear-gradient( rgb(245, 177, 177) 0%, rgb(246, 9, 9) 90%);
-    filter: drop-shadow(rgba(101, 171, 124, 0.484) 5px 5px 2px);
-}
-
