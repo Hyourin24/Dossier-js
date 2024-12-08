@@ -43,6 +43,7 @@
 
 let main = document.querySelector(".main");
 let userSection1 = document.querySelector(".userSection1")
+
 async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -57,12 +58,24 @@ async function AfficherPost() {
             postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
             userSection1.appendChild(postDiv);
             
+            
 
             let user = users.find(user => user.id === post.userId);
                 let userInfoDiv = document.createElement("div");
                 userInfoDiv.classList.add("userInfo");
-                userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
                 postDiv.appendChild(userInfoDiv);
+                let userLink = document.createElement("a");
+                userLink.textContent = `Nom de l'utilisateur: ${user.name}`; 
+                userLink.href = `./page 3.html`; 
+
+                userInfoDiv.appendChild(userLink);
+                
+                
+                
+
+
+                
+                
         });
     } catch (error) {
         console.error(error);
