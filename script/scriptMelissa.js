@@ -53,24 +53,26 @@ async function AfficherPost() {
             postTitre.classList.add("postTitre")
             postTitre.textContent = `Titre: ${post.title}`
             postDiv.appendChild(postTitre)
-            postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
+            
 
             let user = users.find(user => user.id === post.userId);
-            
-                let userSection = document.createElement("div");
-                userSection.classList.add("userInfo");
-                userSection.textContent = `Nom de l'utilisateur: ${user.name}`;
-                userSection.appendChild(userInfoDiv);
-            
-                postComments.forEach(comment => {
+            //Création du body
+            let postBody = document.createElement("p")
+            postBody.classList.add("postBody")
+            postBody.textContent = `Contenu: ${post.body}`
+            postDiv.appendChild(postBody)
 
-
+            //Création des noms
+            let postName = document.createElement("p");
+            postName.classList.add("postName");
+            postName.textContent = `Nom de l'utilisateur: ${user.name}`;
+            postDiv.appendChild(postName);
+            
+            postComments.forEach(comment => {
                 let commentsDiv = document.createElement("div");
                 commentsDiv.classList.add("commentsDiv");
                 commentsDiv.textContent = `Commentaire: ${comment.body}`;
-                postDiv.appendChild(commentsDiv);
-
-
+                postInfo.appendChild(commentsDiv);
             });
             let deleteButton = document.createElement("button");
             deleteButton.classList.add("monBouton");
