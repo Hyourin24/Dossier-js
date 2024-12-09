@@ -1,0 +1,52 @@
+form {
+    background: linear-gradient(45deg, #01362c 40%, #2a785e 50%, #45a049 10%);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+
+
+/* Form labels and inputs */
+form label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #fff;
+}
+
+form input, form textarea, form button {
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Textarea */
+form textarea {
+    resize: horizontal;
+    min-height: 100px;
+}
+
+/* Buttons */
+form button {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#feedback {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
