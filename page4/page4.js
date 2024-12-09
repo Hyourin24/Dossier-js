@@ -46,6 +46,7 @@ document.getElementById("unique-form").addEventListener("submit", async (event) 
          const data = await response.json();
          displayFeedback(`Post created successfully! New Post ID: ${data.id}`,);
             feedback.style.color = "green";
+            
 //         // Log the post details
          logPost(formData);
 

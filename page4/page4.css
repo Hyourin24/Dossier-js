@@ -1,3 +1,5 @@
+ /* form styles */
+
 form {
     background: linear-gradient(45deg, #01362c 40%, #2a785e 50%, #45a049 10%);
     border-radius: 8px;
@@ -44,6 +46,8 @@ form button {
 form button:hover {
     background-color: #45a049;
 }
+
+/* feedback */
 
 #feedback {
     text-align: center;
