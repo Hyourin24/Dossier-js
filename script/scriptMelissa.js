@@ -35,7 +35,7 @@ try {
 } catch(error) {
   console.log(error);
 }
-let userSection3 = document.querySelector("userSection3")
+let userSection3 = document.querySelector(".userSection3")
 async function AfficherPost() {
     try {
         let responsePosts = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -48,16 +48,38 @@ async function AfficherPost() {
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
             userSection3.appendChild(postDiv);
+            //Création des titres
+            let postTitre = document.createElement("p")
+            postTitre.classList.add("postTitre")
+            postTitre.textContent = `Titre: ${post.title}`
+            postDiv.appendChild(postTitre)
             postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
 
             let user = users.find(user => user.id === post.userId);
-            if (user) {
+            
                 let userSection = document.createElement("div");
                 userSection.classList.add("userInfo");
                 userSection.textContent = `Nom de l'utilisateur: ${user.name}`;
                 userSection.appendChild(userInfoDiv);
-            }
-        });
+            
+                postComments.forEach(comment => {
+
+
+                let commentsDiv = document.createElement("div");
+                commentsDiv.classList.add("commentsDiv");
+                commentsDiv.textContent = `Commentaire: ${comment.body}`;
+                postDiv.appendChild(commentsDiv);
+
+
+            });
+            let deleteButton = document.createElement("button");
+            deleteButton.classList.add("monBouton");
+            postDiv.appendChild(deleteButton);
+            deleteButton.textContent = "Supprimer"
+                deleteButton.addEventListener("click", () => {
+                    postDiv.remove()
+            })
+        })
     } catch (error) {
         console.error(error);
     }
