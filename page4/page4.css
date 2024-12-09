@@ -15,6 +15,7 @@ header, footer {
 }
 
 
+
 .post {
     border-bottom: none;
     padding: 15px;
@@ -35,6 +36,8 @@ html, body {
     height: 100vh; 
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 /* Header */
@@ -113,6 +116,10 @@ form button:hover {
     text-align: center;
     margin-top: 1rem;
     font-size: 1rem;
+}
+
+.error{
+    color: red;
 }
 
 /* Footer */
