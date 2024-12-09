@@ -104,6 +104,9 @@ h2 {
     display: grid;
     grid-template-columns: 50% 50%;
 }
+.userSection3 {
+    min-height: 100vh;
+}
 .postInfo {
     margin-left: 100px;
     margin-right: 100px;
@@ -112,6 +115,7 @@ h2 {
     border: solid 2px rgba(42, 120, 94, 1);
     display: grid;
     grid-row: 30% 30% 30%;
+    max-width: 100%;
 
 }
 .postTitre, .postBody, .postName {
