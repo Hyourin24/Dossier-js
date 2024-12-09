@@ -1,8 +1,4 @@
 
-@font-face {
-    font-family: 'constantia';
-    src: url(fonts\constantia\constan.ttf);
-}
 
 * {
     margin: 0;
@@ -30,7 +26,7 @@ p {
     margin-right: 30px;
 }
 
-p:hover{
+p:hover {
     text-decoration: underline;
 }
 
@@ -39,10 +35,9 @@ p:hover{
     color: white;
     display: block;
     text-decoration: none;
-   
 }
 
-.accueil:hover{
+.accueil:hover {
     text-decoration: underline;
 }
 
@@ -99,8 +94,7 @@ h1 {
     padding-bottom: 40px;
     padding-left: 40px;
     padding-right: 40px;
-    border: solid 2px rgba(42,120,94,1);
-    
+    border: solid 2px rgba(42,120,94,1);  
 }
 
 .commentsDiv {
@@ -121,8 +115,7 @@ h2 {
 .bouton {
     display: flex;
     justify-content: center;
-    margin: 50px;
-    
+    margin: 50px; 
 }
 
 .monBouton {
@@ -145,6 +138,5 @@ h2 {
 footer {
     background-color: #2a785e;
     padding: 40px 0;
-    margin-top: 50px;
-    
+    margin-top: 50px;   
 }
