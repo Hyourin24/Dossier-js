@@ -1,11 +1,11 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     ;
     min-height: 100vh;
-}
+} */
 
 header, footer {
     background: linear-gradient(0deg, rgba(42,120,94,1)0%, rgba(1,54, 44,1) 60%);
@@ -113,7 +113,6 @@ form button:hover {
     text-align: center;
     margin-top: 1rem;
     font-size: 1rem;
-    
 }
 
 /* Footer */
@@ -178,7 +177,7 @@ footer {
 }
 
 .logged-post p {
-    margin: 15px 0;
+    margin: 5px 0;
 }
 
 .delete-btn {
@@ -193,6 +192,15 @@ footer {
 
 .delete-btn:hover {
     background-color: #2a785e;
+}
+
+
+.post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    position: relative;
 }
 
 /* length, thickness, color and space between line and text */
