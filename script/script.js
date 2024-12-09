@@ -50,19 +50,32 @@ async function AfficherPost() {
 
         let responseUsers = await fetch('https://jsonplaceholder.typicode.com/users');
         let users = await responseUsers.json();
-
+        
+        //Pour chaque post, reprise des informations de fetch
         posts.forEach(post => {
+            //Création des divs
             let postDiv = document.createElement("div");
             postDiv.classList.add("postInfo");
-            postDiv.textContent = `Titre: ${post.title}, Contenu: ${post.body}`;
             userSection1.appendChild(postDiv);
+            //Création des titres
+            let postTitre = document.createElement("p")
+            postTitre.classList.add("postTitre")
+            postTitre.textContent = `Titre: ${post.title}`
+            postDiv.appendChild(postTitre)
+            //Création des body 
+            let postBody = document.createElement("p")
+            postBody.classList.add("postBody")
+            postBody.textContent = `Contenu: ${post.body}`
+            postDiv.appendChild(postBody)
             
-
+            //Identification des id et des noms. Comparaisons des deux, les noms deviennent les id
             let user = users.find(user => user.id === post.userId);
-                let userInfoDiv = document.createElement("div");
-                userInfoDiv.classList.add("userInfo");
-                userInfoDiv.textContent = `Nom de l'utilisateur: ${user.name}`;
-                postDiv.appendChild(userInfoDiv);
+
+            //Création des noms
+            let postName = document.createElement("p");
+            postName.classList.add("userInfo");
+            postName.textContent = `Nom de l'utilisateur: ${user.name}`;
+            postDiv.appendChild(postName);
         });
     } catch (error) {
         console.error(error);
