@@ -63,20 +63,28 @@ async function AfficherPost() {
             postTitre.textContent = `Titre: ${post.title}`
             postDiv.appendChild(postTitre)
             //Création des body 
-            let postBody = document.createElement("p")
+
+            let user = users.find(user => user.id === post.userId);
+
+            let postBody = document.createElement("a")
+            postBody.href = `index.html`
             postBody.classList.add("postBody")
             postBody.textContent = `Contenu: ${post.body}`
             postDiv.appendChild(postBody)
             
             //Identification des id et des noms. Comparaisons des deux, les noms deviennent les id
-            let user = users.find(user => user.id === post.userId);
+            
 
             //Création des noms
-            let postName = document.createElement("p");
-            postName.classList.add("userInfo");
+            let postName = document.createElement("a");
+            postName.href = `https://jsonplaceholder.typicode.com/users/${user.id}`
+            postName.classList.add("postName");
             postName.textContent = `Nom de l'utilisateur: ${user.name}`;
             postDiv.appendChild(postName);
         });
+
+
+        
     } catch (error) {
         console.error(error);
     }

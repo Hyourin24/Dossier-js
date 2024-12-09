@@ -109,10 +109,20 @@ h2 {
     margin-top: 50px;
     padding: 40px;
     border: solid 2px rgba(42, 120, 94, 1);
+    display: grid;
+    grid-row: 30% 30% 30%;
 
 }
-.postTitre, .postBody {
+.postTitre, .postBody, .postName {
     margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.postTitre:hover,
+.postBody:hover,
+.postName:hover {
+   text-decoration: underline;
 }
 /* 
 FOOTER */
