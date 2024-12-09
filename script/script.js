@@ -67,7 +67,7 @@ async function AfficherPost() {
             let user = users.find(user => user.id === post.userId);
 
             let postBody = document.createElement("a")
-            postBody.href = `index.html`
+            postBody.href = `index3.html`
             postBody.classList.add("postBody")
             postBody.textContent = `Contenu: ${post.body}`
             postDiv.appendChild(postBody)
