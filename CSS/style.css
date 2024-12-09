@@ -4,7 +4,6 @@
     src: url(fonts\constantia\constan.ttf);
 }
 
-
 * {
     margin: 0;
 }
@@ -15,47 +14,6 @@ header {
     padding-bottom: 150px;
     padding-top: 50px;
     background: linear-gradient(0deg, rgba(42,120,94,1) 0%, rgba(1,54,44,1) 60%);
-}
-
-footer {
-    background-color: #2a785e;
-    padding: 40px 0;
-    margin-top: 50px;
-    
-}
-
-
-
-.postInfo {
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
-    border: solid 2px rgba(42,120,94,1);
-    
-}
-
-.commentsDiv {
-    padding-top: 20px;
-}
-
-h1 {
-    text-align: left;
-    margin-left: 40px;
-    font-size: 30px;
-    color: white;
-    display: inline-flex;
-    float: left;
-    font-family: 'constantia';
-}
-
-h2 {
-    text-align: center;
-    margin-top: 50px;
-    color: rgba(1,54,44,1);
 }
 
 .texteHeader {
@@ -76,6 +34,25 @@ p:hover{
     text-decoration: underline;
 }
 
+.accueil {
+    text-align: center;
+    color: white;
+    display: block;
+    text-decoration: none;
+   
+}
+
+.accueil:hover{
+    text-decoration: underline;
+}
+
+input {
+    border-radius: 10px;
+    border: none;
+    height: 20px;
+    width: 150px;
+    display: flex;
+}
 .searchBar {
     position: relative;
     width: 200px;
@@ -104,25 +81,41 @@ p:hover{
     color: #2a785e;
 }
 
-.accueil {
-    text-align: center;
+h1 {
+    text-align: left;
+    margin-left: 40px;
+    font-size: 30px;
     color: white;
-    display: block;
-    text-decoration: none;
-   
+    display: inline-flex;
+    float: left;
+    font-family: 'constantia';
 }
 
-.accueil:hover{
-    text-decoration: underline;
+.postInfo {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid 2px rgba(42,120,94,1);
+    
+}
+
+.commentsDiv {
+    padding-top: 20px;
+}
+
+.commentsDiv:first-child {
+    display: none;
 }
 
 
-input {
-    border-radius: 10px;
-    border: none;
-    height: 20px;
-    width: 150px;
-    display: flex;
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    color: rgba(1,54,44,1);
 }
 
 .bouton {
@@ -148,7 +141,10 @@ input {
     color: white;
 }
 
-.commentsDiv:first-child {
-    display: none;
-}
 
+footer {
+    background-color: #2a785e;
+    padding: 40px 0;
+    margin-top: 50px;
+    
+}
