@@ -8,26 +8,26 @@ body {
 }
 
 header, footer {
-    background-color: #2a785e;
+    background: linear-gradient(0deg, rgba(42,120,94,1)0%, rgba(1,54, 44,1) 60%);
     color: #fff;
     text-align: center;
     padding: 1em 0;
 }
 
-header nav a {
+/* header nav a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-}
+} */
 
-header nav a:hover {
+/* header nav a:hover {
     text-decoration: underline;
-}
+} */
 
-main {
+/* main {
     flex: 1;
     padding: 20px;
-}
+} */
 
 .post {
     border-bottom: none;
