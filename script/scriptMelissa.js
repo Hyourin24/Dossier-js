@@ -38,14 +38,21 @@ async function AfficherPost() {
 
                 
             });
+
             let deleteButton = document.createElement("button");
             deleteButton.classList.add("monBouton");
             postDiv.appendChild(deleteButton);
             deleteButton.textContent = "Supprimer"
-                deleteButton.addEventListener("click", () => {
-                    postDiv.remove()
-                })
+                deleteButton.addEventListener("click", () => { 
+                    document.querySelector('#delete-request .status');
+                    fetch('https://jsonplaceholder.typicode.com/comments',
+                   { method: 'DELETE' })
+             .then(() => deleteButton.remove(postDiv));
+                }); 
 
+           
+            
+             
                 
         });
 
