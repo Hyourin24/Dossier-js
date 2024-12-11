@@ -67,7 +67,7 @@ const logPost = (formData) => {
      const postDiv = document.createElement("div");
      postDiv.className = "logged-post";
 
-     // Display post details
+     // This will display post details
      function createParagraph(label, value) {
         const paragraph = document.createElement("p");
         paragraph.textContent = `${label}: ${value}`;
@@ -85,7 +85,7 @@ const logPost = (formData) => {
      deleteButton.textContent = "Delete";
      deleteButton.className = "delete-btn";
      deleteButton.addEventListener("click", () => {
-         logContainer.removeChild(postDiv);
+        logContainer.removeChild(postDiv);
      });
 
     // Append all elements to the postDiv
