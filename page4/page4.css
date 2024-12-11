@@ -121,15 +121,13 @@ form button:hover {
 .error{
     color: red;
 }
-
-/* Footer */
-footer {
+/* footer {
     text-align: center;
     background-color: #4CAF50;
     color: white;
     padding: 1rem;
     font-size: 0.875rem;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -176,7 +174,7 @@ footer {
 
 
 .logged-post {
-    border: 1px solid #ddd;
+    border: 1px solid #01362c;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
