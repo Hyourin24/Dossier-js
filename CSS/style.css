@@ -1,4 +1,8 @@
 
+@font-face {
+    font-family: 'constantia';
+    src: url(fonts\constantia\constan.ttf);
+}
 
 * {
     margin: 0;
@@ -86,6 +90,11 @@ h1 {
     font-family: 'constantia';
 }
 
+.userSection3 { 
+    min-height: 100vh;
+
+    
+}
 .postInfo {
     margin-left: 100px;
     margin-right: 100px;
@@ -113,25 +122,26 @@ h2 {
 }
 
 .bouton {
-    display: flex;
+   
     justify-content: center;
     margin: 50px; 
 }
 
 .monBouton {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 50%;
+    padding-right: 47%;
     padding-top: 10px;
     padding-bottom: 10px; 
     margin-top: 40px;
     border: solid 2px rgba(42,120,94,1);
-    background-color: white;
+    background-color: rgba(42,120,94,1);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:white;
 }
 
 .monBouton:hover {
-    background-color: rgba(42,120,94,1);
-    color: white;
+    background-color: white;
+    color: rgba(42,120,94,1)
 }
 
 
