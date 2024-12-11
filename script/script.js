@@ -84,7 +84,7 @@ async function AfficherPost() {
             
 
             postBody.addEventListener("click", () => {
-                localStorage.setItem("selectedPostId", post.userId);
+                localStorage.setItem("selectedPostId", post.Id);
             });
             // Ajout d'un bouton/lien pour afficher uniquement ce postDiv
         });
