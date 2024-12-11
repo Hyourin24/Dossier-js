@@ -45,7 +45,8 @@ document.getElementById("unique-form").addEventListener("submit", async (event) 
 
          const data = await response.json();
          displayFeedback(`Post created successfully! New Post ID: ${data.id}`,);
-            feedback.style.color = "green";
+    
+        
             
 //         // Log the post details
          logPost(formData);
@@ -88,11 +89,11 @@ const logPost = (formData) => {
      });
 
     // Append all elements to the postDiv
-     postDiv.appendChild(userIdParagraph);
+    postDiv.appendChild(userIdParagraph);
     postDiv.appendChild(userNameParagraph);
     postDiv.appendChild(postTitleParagraph);
-     postDiv.appendChild(postBodyParagraph);
-     postDiv.appendChild(deleteButton);
+    postDiv.appendChild(postBodyParagraph);
+    postDiv.appendChild(deleteButton);
 
      // Append the postDiv to the log container
     logContainer.appendChild(postDiv);

@@ -1,30 +1,8 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    ;
-    min-height: 100vh;
-} */
-
 header, footer {
     background: linear-gradient(0deg, rgba(42,120,94,1)0%, rgba(1,54, 44,1) 60%);
     color: #fff;
     text-align: center;
     padding: 1em 0;
-}
-
-
-
-.post {
-    border-bottom: none;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.post h2 {
-    margin: 0;
-    font-size: 1.2em;
 }
 
 
@@ -46,11 +24,6 @@ header {
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-header h1 {
-    font-size: 2rem;
-    margin: 0;
 }
 
 /* Main content */
@@ -121,14 +94,13 @@ form button:hover {
 .error{
     color: red;
 }
-/* footer {
-    text-align: center;
-    background-color: #4CAF50;
-    color: white;
-    padding: 1rem;
-    font-size: 0.875rem;
-} */
 
+#feedback {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: green;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     form {
