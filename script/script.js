@@ -67,7 +67,7 @@ async function AfficherPost() {
             let user = users.find(user => user.id === post.userId);
 
             let postBody = document.createElement("a")
-            postBody.href = `index3.html`
+            postBody.href = "./index3.html"
             postBody.classList.add("postBody")
             postBody.textContent = `Contenu: ${post.body}`
             postDiv.appendChild(postBody)
@@ -81,10 +81,15 @@ async function AfficherPost() {
             postName.classList.add("postName");
             postName.textContent = `Nom de l'utilisateur: ${user.name}`;
             postDiv.appendChild(postName);
+            
+
+            postBody.addEventListener("click", () => {
+                localStorage.setItem("selectedPostId", post.userId);
+            });
+            // Ajout d'un bouton/lien pour afficher uniquement ce postDiv
         });
 
-
-        
+         
     } catch (error) {
         console.error(error);
     }

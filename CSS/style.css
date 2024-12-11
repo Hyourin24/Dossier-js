@@ -129,6 +129,27 @@ h2 {
 .postName:hover {
    text-decoration: underline;
 }
+.bouton {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.monBouton {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    border: solid 2px rgba(42, 120, 94, 1);
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.monBouton:hover {
+    background-color: rgba(42, 120, 94, 1);
+    color: white;
+}
 /* 
 FOOTER */
 
